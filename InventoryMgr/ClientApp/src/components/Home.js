@@ -16,6 +16,7 @@ export class Home extends Component {
     ]
   };
 
+
   addInventoryObject = (name, onHand, inTransit) =>{//add option for adding new items into the table
     const nameInput = document.getElementById('name').value;
     const onHandInput = document.getElementById('onHand').value;
