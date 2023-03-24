@@ -1,0 +1,26 @@
+html, .body{
+    font-size: 14px;
+    background-color: #F3F4F3;
+}
+
+button:hover{
+    background-color: #5f9b65;
+    color: white;
+}
+
+button{
+    background-color: white;
+    color: black;
+    padding: 14px 15px;
+    margin: 8px 0;
+    border: black;
+    border-style: inset;
+    cursor: Finger;
+    width: 100%;
+    display: grid;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
