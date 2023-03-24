@@ -1,6 +1,6 @@
 html, .body{
     font-size: 14px;
-    background-color: #F3F4F3;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button:hover{
@@ -13,8 +13,8 @@ button{
     color: black;
     padding: 14px 15px;
     margin: 8px 0;
-    border: black;
-    border-style: inset;
+    border: #1B4678;
+    border-style: solid;
     cursor: Finger;
     width: 100%;
     display: grid;

@@ -12,6 +12,8 @@ function Table() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [onHand, setAmount] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+
 
   // Fetch data from backend API on component mount
   useEffect(() => {
@@ -49,8 +51,22 @@ function Table() {
     await fetchData();
   };
 
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  //Filter data based on search tesrm
+  const filteredData = data.filter((item) => {
+    return item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+           item.description.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+
+//table search term testing
   return (
     <div class="body">
+     <div>
+        <input type="text" placeholder="Search..." onChange={handleSearch} />
+      </div>
       <table>
         <thead>
           <tr>
@@ -62,7 +78,7 @@ function Table() {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
+          {filteredData.map((item) => (
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>
